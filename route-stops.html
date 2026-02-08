@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route Stops</title>
+    <style>
+        body{ font-family: Arial, sans-serif; margin:0; display:flex; flex-direction:column; background-color: rgb(239, 235, 224); }
+        .routes-container{ display: flex; flex-wrap: wrap; }
+        .route-box{ width: 48%; border: 2px solid #3498db; padding: 15px; margin: auto; box-sizing: border-box; background: #f9f9f9; }
+        nav{ background:#996428; padding:10px 15px; display:flex; justify-content:flex-end; }
+        nav a{ color:white; text-decoration:none; margin-left:30px; }
+        nav a:hover{ color: #ffd966; text-decoration: underline; transition: 0.3s ease; }
+        .link{ margin-left: auto; margin-right: auto; }
+
+        .stop-table{ width:100%; border-collapse:collapse; margin-top:10px; }
+        .stop-table th, .stop-table td{ border:1px solid #3498db; padding:8px; text-align:center; }
+        .stop-table tr:hover{ background-color:#eaf4fb; }
+
+        .stop-sequence{ display:flex; justify-content: center; align-items:center; list-style:none; padding:0; }
+        .stop-sequence li::after{ content:"  →  "; }
+        .stop-sequence li:last-child::after{ content:""; }
+
+        @media (max-width:600px){
+            .route-box{ width: 100%; margin: 10px 0; }
+            .stop-sequence{ flex-direction:column; align-items:flex-start; }
+            .stop-sequence li::after{ content:"  ↓  "; }
+            .stop-sequence li:last-child::after{ content:""; }
+            body{ font-size: 14px; }
+            nav{ flex-direction: column; align-items: flex-start; }
+            nav a{ margin: 8px 0;}
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="route-card.html">Routes</a>
+    <a href="route-stops.html">Stops</a>
+    <a href="service-category.html">Services</a>
+    <a href="schedule-table.html">Schedules</a>
+    <a href="feedback-form.html">Feedback</a>
+    <a href="transport-links.html">Links</a>
+</nav>
+
+<h2 style="margin: 10px;">Transport Route Stops</h2>
+
+<div class="routes-container">
+
+    <div class="route-box">
+        <h3>Route 24A (City Center → Airport)</h3>
+
+        <ol class="stop-sequence">
+            <li>City Center</li>
+            <li>Main Market</li>
+            <li>Central Park</li>
+            <li>Airport</li>
+        </ol>
+
+        <table class="stop-table">
+            <tr>
+                <th>Stop Name</th>
+                <th>Time</th>
+            </tr>
+            <tr><td>City Center</td><td>08:00 AM</td></tr>
+            <tr><td>Main Market</td><td>08:15 AM</td></tr>
+            <tr><td>Central Park</td><td>08:30 AM</td></tr>
+            <tr><td>Airport</td><td>08:50 AM</td></tr>
+        </table>
+    </div>
+
+    <div class="route-box">
+        <h3>Route 18B (Railway Station → Bus Terminal)</h3>
+
+        <ol class="stop-sequence">
+            <li>Railway Station</li>
+            <li>Clock Tower</li>
+            <li>City Square</li>
+            <li>Bus Terminal</li>
+        </ol>
+
+        <table class="stop-table">
+            <tr>
+                <th>Stop Name</th>
+                <th>Time</th>
+            </tr>
+            <tr><td>Railway Station</td><td>09:00 AM</td></tr>
+            <tr><td>Clock Tower</td><td>09:15 AM</td></tr>
+            <tr><td>City Square</td><td>09:30 AM</td></tr>
+            <tr><td>Bus Terminal</td><td>09:45 AM</td></tr>
+        </table>
+    </div>
+
+    <div class="route-box">
+        <h3>Route 10C (University → City Mall)</h3>
+
+        <ol class="stop-sequence">
+            <li>University Gate</li>
+            <li>Library Road</li>
+            <li>Tech Park</li>
+            <li>City Mall</li>
+        </ol>
+
+        <table class="stop-table">
+            <tr>
+                <th>Stop Name</th>
+                <th>Time</th>
+            </tr>
+            <tr><td>University Gate</td><td>10:00 AM</td></tr>
+            <tr><td>Library Road</td><td>10:15 AM</td></tr>
+            <tr><td>Tech Park</td><td>10:30 AM</td></tr>
+            <tr><td>City Mall</td><td>10:50 AM</td></tr>
+        </table>
+    </div>
+
+    <div class="route-box">
+        <h3>Route 7D (Industrial Area → Residential Colony)</h3>
+
+        <ol class="stop-sequence">
+            <li>Industrial Area</li>
+            <li>Factory Circle</li>
+            <li>Community Hall</li>
+            <li>Residential Colony</li>
+        </ol>
+
+        <table class="stop-table">
+            <tr>
+                <th>Stop Name</th>
+                <th>Time</th>
+            </tr>
+            <tr><td>Industrial Area</td><td>11:00 AM</td></tr>
+            <tr><td>Factory Circle</td><td>11:15 AM</td></tr>
+            <tr><td>Community Hall</td><td>11:30 AM</td></tr>
+            <tr><td>Residential Colony</td><td>11:45 AM</td></tr>
+        </table>
+    </div>
+
+</div>
+
+<div class="link">
+    <p>
+        <a href="route-map.html">Click Here</a> to view all stops on map.
+    </p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body{ font-family: Arial, sans-serif; margin:0; min-height:100vh; display:flex; flex-direction:column; background-color: rgb(239, 235, 224);}
+        label { display: block; margin-top: 10px; }
+        nav{ background:#996428; padding:10px 15px; display:flex; justify-content:flex-end; }
+        nav a{ color:white; text-decoration:none; margin-left:30px; }
+        nav a:hover{ color: #ffd966; text-decoration: underline; transition: 0.3s ease; }
+        .form{ margin-left: auto; margin-right: auto; }
+        @media (max-width: 600px){
+            body{ font-size: 14px; }
+            .form{margin-left: 20px;}
+            nav{ flex-direction: column; align-items: flex-start; }
+            nav a{ margin: 8px 0;}
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="route-card.html">Routes</a>
+        <a href="route-stops.html">Stops</a>
+        <a href="service-category.html">Services</a>
+        <a href="schedule-table.html">Schedules</a>
+        <a href="feedback-form.html">Feedback</a>
+        <a href="transport-links.html">Links</a>
+    </nav>
+
+    <div class="form">
+        <h2>Citizen Feedback</h2>
+
+        <form>
+            <label>Name:
+                <input type="text" required pattern="[A-Za-z ]+" title="Name">
+            </label>
+
+            <label>Contact:
+                <input type="text" required pattern="[0-9]{10}" title="Enter mobile number">
+            </label>
+
+            <label>Email ID:
+                <input type="email" required placeholder="example@gmail.com">
+            </label>
+
+            <label>Age:
+                <input type="number" required min="1" max="100" title="Enter valid age">
+            </label>
+
+            <label>Route:
+                <select required>
+                    <option value="">Select Route</option>
+                    <option>24A</option>
+                    <option>18B</option>
+                    <option>10C</option>
+                    <option>7D</option>
+                </select>
+            </label>
+
+            <label>Feedback:
+                <br>
+                <textarea rows="4" cols="40" required></textarea>
+            </label>
+
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport Schedule</title>
+    <style>
+        table { border-collapse: collapse; width: 80%; margin-left: auto; margin-right: auto; }
+        th, td { border: 1px solid black; padding: 8px; text-align: center; }
+        body{ font-family: Arial, sans-serif; margin:0; min-height:100vh; display:flex; flex-direction:column; background-color: rgb(239, 235, 224);}
+        nav{ background:#996428; padding:10px 15px; display:flex; justify-content:flex-end; }
+        nav a{ color:white; text-decoration:none; margin-left:30px; }
+        nav a:hover{ color: #ffd966; text-decoration: underline; transition: 0.3s ease; }
+        @media (max-width: 600px){
+            body{ font-size: 14px; }
+            nav{ flex-direction: column; align-items: flex-start; }
+            nav a{ margin: 8px 0;}
+            table{ width: 100%; margin: 10px 0;}
+        }
+        .delay-alert{ background-color: #ff4d4d; color: white; padding: 12px 20px; margin: 15px auto; width: fit-content; font-weight: bold; border-radius: 5px; animation: blink 1s infinite; }
+        @keyframes blink{
+            0%   { opacity: 1; }
+            50%  { opacity: 0.4; }
+            100% { opacity: 1; } 
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="route-card.html">Routes</a>
+        <a href="route-stops.html">Stops</a>
+        <a href="service-category.html">Services</a>
+        <a href="schedule-table.html">Schedules</a>
+        <a href="feedback-form.html">Feedback</a>
+        <a href="transport-links.html">Links</a>
+    </nav>
+    <hr>
+    <div class="delay-alert">
+        ⚠ Delay Alert: Route 10C is delayed due to traffic.
+    </div>
+    <hr>
+    <table>
+        <caption>Daily Transport Schedule (All Routes & Stops)</caption>
+        <tr>
+            <th>Route No</th>
+            <th>Stop Name</th>
+            <th>Arrival Time</th>
+            <th>Departure Time</th>
+        </tr>
+
+        <!-- Route 24A -->
+        <tr><td>24A</td><td>City Center</td><td>08:00</td><td>08:02</td></tr>
+        <tr><td>24A</td><td>Main Market</td><td>08:15</td><td>08:17</td></tr>
+        <tr><td>24A</td><td>Central Park</td><td>08:30</td><td>08:32</td></tr>
+        <tr><td>24A</td><td>Airport</td><td>8:50</td><td>—</td></tr>
+
+        <!-- Route 18B -->
+        <tr><td>18B</td><td>Railway Station</td><td>09:00</td><td>09:02</td></tr>
+        <tr><td>18B</td><td>Clock Tower</td><td>09:15</td><td>09:17</td></tr>
+        <tr><td>18B</td><td>City Square</td><td>09:30</td><td>09:32</td></tr>
+        <tr><td>18B</td><td>Bus Terminal</td><td>09:45</td><td>—</td></tr>
+
+        <!-- Route 10C -->
+        <tr><td>10C</td><td>University Gate</td><td>10:00</td><td>10:02</td></tr>
+        <tr><td>10C</td><td>Library Road</td><td>10:15</td><td>10:17</td></tr>
+        <tr><td>10C</td><td>Tech Park</td><td>10:30</td><td>10:32</td></tr>
+        <tr><td>10C</td><td>City Mall</td><td>10:50</td><td>—</td></tr>
+
+        <!-- Route 7D -->
+        <tr><td>7D</td><td>Industrial Area</td><td>11:00</td><td>11:02</td></tr>
+        <tr><td>7D</td><td>Factory Circle</td><td>11:15</td><td>11:17</td></tr>
+        <tr><td>7D</td><td>Community Hall</td><td>11:30</td><td>11:32</td></tr>
+        <tr><td>7D</td><td>Residential Colony</td><td>11:45</td><td>—</td></tr>
+    </table>
+    <hr>
+</body>
+</html>

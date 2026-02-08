@@ -1,0 +1,30 @@
+body{ 
+    font-family: Arial,sans-serif; 
+    margin:0; 
+    min-height:100vh; 
+    display:flex; 
+    flex-direction:column;
+    background-color: rgb(239, 235, 224);
+}
+
+header, footer{ 
+    background:#2c3e50; 
+    color:white; 
+    padding:15px; }
+
+main{ 
+    flex:1; 
+    text-align:center; 
+    padding:20px; 
+    max-width: 700px; 
+    margin: auto; }
+
+footer{ 
+    text-align:center; 
+    font-size:14px; }
+
+nav a:hover{
+    color: #ffd966;
+    text-decoration: underline;
+    transition: 0.3s ease;
+}
